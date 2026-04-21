@@ -11,6 +11,7 @@ app.use(cookieParser());
 
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import recordRoutes from "./routes/recordRoutes.js";
 
 app.get("/", (req, res) => {
   res.send("API running...");
@@ -19,5 +20,7 @@ app.get("/", (req, res) => {
 app.use("/auth", authRoutes);
 
 app.use("/users", userRoutes);
+
+app.use("/", recordRoutes);
 
 export default app;
